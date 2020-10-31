@@ -6,7 +6,6 @@ A new Flutter project.
 C:\Users\hp\Desktop\personal\images\a.svg
 
 ![GitHub Logo](/images/a.svg)
-Format: ![Alt Text](url)
 
 
 This project is a starting point for a Flutter application.
