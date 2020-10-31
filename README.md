@@ -4,18 +4,14 @@ A new Flutter project.
 
 ## Getting Started
 
-    First Images | Secound Images
-    ------------- | --------------
-    ![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg)
-    --------------------------- | ------------------------------
-    ![GitHub Logo](/images/a.svg) | ![alt text][/images/a.svg]{height=600px width=500px}
+First Images | Secound Images
+------------- | --------------
+![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg)
+--------------------------- | ------------------------------
+![GitHub Logo](/images/a.svg) | ![alt text][/images/a.svg]{height=600px width=500px}
+--------------------------- | -------------------------------
 
-    --------------------------- | -------------------------------
-
-
-
-
-    <img src="/images/a.svg" width="324" height="324">
+<img src="/images/a.svg" width="324" height="324">
 
         <p align="center">
         <img src="screen1.png" width="256" height="455">
