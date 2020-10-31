@@ -7,9 +7,9 @@ A new Flutter project.
 
 First Images | Secound Images
 ------------- | --------------
-![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg)
+![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg){:class="img-responsive"}
 --------------------------- | ------------------------------
-![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg)
+![GitHub Logo](/images/a.svg){:class="img-responsive"} | ![GitHub Logo](/images/a.svg)
 --------------------------- | -------------------------------
 
 
