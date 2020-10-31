@@ -6,11 +6,11 @@ A new Flutter project.
 
 
 First Images | Secound Images
-.............|................
+------------- | --------------
 ![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg)
-..............................|...............................
+--------------------------- | ------------------------------
 ![GitHub Logo](/images/a.svg) | ![GitHub Logo](/images/a.svg)
-............................................................
+--------------------------- | -------------------------------
 
 
 This project is a starting point for a Flutter application.
