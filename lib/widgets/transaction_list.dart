@@ -13,19 +13,17 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: MediaQuery.of(context).size.height * 0.60,
       child: transactions.isEmpty
           ? Column(
               children: [
                 Text(
                   "No transaction added yet",
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 Expanded(
                   child: SvgPicture.asset(
                     'images/a.svg',
-                    //color: Colors.blue[50],
-                    colorBlendMode: BlendMode.srcOut,
                     fit: BoxFit.fill,
                     semanticsLabel: 'bangladesh',
                   ),
@@ -50,10 +48,11 @@ class TransactionList extends StatelessWidget {
                     ),
                     title: Text(
                       "${transactions[index].title}",
-                      style: Theme.of(context).textTheme.title,
+                      style: Theme.of(context).textTheme.headline6,
                     ),
                     subtitle: Text(
-                        " ${DateFormat.yMMMd().format(transactions[index].date)}"),
+                      " ${DateFormat.yMMMd().format(transactions[index].date)}",
+                    ),
                     trailing: IconButton(
                       icon: Icon(
                         Icons.delete,

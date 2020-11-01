@@ -40,22 +40,25 @@ class Chart extends StatelessWidget {
     return Card(
       elevation: 5,
       margin: EdgeInsets.all(10),
-      child: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: groupTransaction.map((data) {
-            return Flexible(
-              fit: FlexFit.tight,
-              child: ChartBar(
-                label: data['days'],
-                speandingAmoiount: data['amount'],
-                spendingPartOfTotal: totalSpending == 0.0
-                    ? 0.0
-                    : (data['amount'] as double) / totalSpending,
-              ),
-            );
-          }).toList(),
+      child: Container(
+        height: MediaQuery.of(context).size.height * 1,
+        child: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: groupTransaction.map((data) {
+              return Flexible(
+                fit: FlexFit.tight,
+                child: ChartBar(
+                  label: data['days'],
+                  speandingAmoiount: data['amount'],
+                  spendingPartOfTotal: totalSpending == 0.0
+                      ? 0.0
+                      : (data['amount'] as double) / totalSpending,
+                ),
+              );
+            }).toList(),
+          ),
         ),
       ),
     );

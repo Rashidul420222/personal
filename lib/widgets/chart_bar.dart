@@ -16,10 +16,10 @@ class ChartBar extends StatelessWidget {
         FittedBox(
           child: Text('\$${speandingAmoiount.toStringAsFixed(0)}'),
         ),
-        SizedBox(height: 4),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
         Container(
-          height: 60,
-          width: 10,
+          height: MediaQuery.of(context).size.height * 0.17,
+          width: MediaQuery.of(context).size.width * 0.01,
           child: Stack(
             children: [
               Container(
@@ -40,7 +40,7 @@ class ChartBar extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 4),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
         Text(label),
       ],
     );

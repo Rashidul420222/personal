@@ -4,31 +4,36 @@ import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './widgets/chart.dart';
 import './models/transaction.dart';
+import 'package:device_preview/device_preview.dart';
 
+// void main() {
+//   runApp(DevicePreview(
+//     builder: (context) => MyApp(),
+//   ));
+// }
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Personal Expenses',
       theme: ThemeData(
-          primarySwatch: Colors.purple,
-          accentColor: Colors.amber,
-          // errorColor: Colors.red,
-          fontFamily: 'Quicksand',
+          primarySwatch: Colors.deepOrange,
+          fontFamily: 'NotoSansJP',
           textTheme: ThemeData.light().textTheme.copyWith(
-                title: TextStyle(
-                  fontFamily: 'OpenSans',
+                headline6: TextStyle(
+                  fontFamily: 'NotoSansJP',
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 16,
                 ),
                 button: TextStyle(color: Colors.white),
               ),
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
-                  title: TextStyle(
-                    fontFamily: 'OpenSans',
+                  headline6: TextStyle(
+                    fontFamily: 'NotoSansJP',
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -47,20 +52,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<Transaction> _userTransactions = [
-    // Transaction(
-    //   id: 't1',
-    //   title: 'New Shoes',
-    //   amount: 69.99,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: 'Weekly Groceries',
-    //   amount: 16.53,
-    //   date: DateTime.now(),
-    // ),
-  ];
+  final List<Transaction> _userTransactions = [];
 
   List<Transaction> get _recentTransactions {
     return _userTransactions.where((tx) {
@@ -109,24 +101,43 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Personal Expenses',
+        title: Padding(
+          padding: EdgeInsets.only(top: 15),
+          child: Text(
+            'Personal Expenses',
+          ),
         ),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.add),
-            onPressed: () => _startAddNewTransaction(context),
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: IconButton(
+              icon: Icon(Icons.add),
+              onPressed: () => _startAddNewTransaction(context),
+            ),
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Chart(recentTransaction: _recentTransactions),
-            TransactionList(_userTransactions, _deleteTransaction),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            height: MediaQuery.of(context).size.height * 1,
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.30,
+                  child: Chart(recentTransaction: _recentTransactions),
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.70,
+                  child: SingleChildScrollView(
+                      child: TransactionList(
+                          _userTransactions, _deleteTransaction)),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
