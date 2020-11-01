@@ -5,13 +5,10 @@ Personal Expenses Flutter project.
 ## App ScreenShot
 
 First home page | Secound User Input page
-------------- | --------------
 ![home](/images/a.png) | ![Input](/images/b.png)
---------------------------- | ------------------
  DatePicker page | Final home page
-------------- | --------------
 ![Date](/images/c.png) | ![home](/images/d.png)
---------------------------- | ------------------
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
