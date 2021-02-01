@@ -4,7 +4,6 @@ import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './widgets/chart.dart';
 import './models/transaction.dart';
-import 'package:device_preview/device_preview.dart';
 
 // void main() {
 //   runApp(DevicePreview(
